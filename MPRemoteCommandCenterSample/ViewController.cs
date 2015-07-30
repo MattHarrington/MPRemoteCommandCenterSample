@@ -32,7 +32,10 @@ namespace MPRemoteCommandCenterSample
             rcc.PreviousTrackCommand.Enabled = false;
             rcc.SkipBackwardCommand.Enabled = false;
             rcc.SkipForwardCommand.Enabled = false;
-            rcc.PlayCommand.Enabled = true;  // http://stackoverflow.com/a/28925369.  You must enable a command so that others can be disabled?
+
+            // You must enable a command so that others can be disabled?
+            // See http://stackoverflow.com/a/28925369.
+            rcc.PlayCommand.Enabled = true;  
 
             MPNowPlayingInfo nowPlayingInfo = new MPNowPlayingInfo();
             nowPlayingInfo.AlbumTitle = "Vermont";
