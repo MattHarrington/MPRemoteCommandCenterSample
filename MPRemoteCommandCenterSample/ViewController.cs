@@ -22,6 +22,7 @@ namespace MPRemoteCommandCenterSample
 
             var audioSession = AVAudioSession.SharedInstance();
             audioSession.SetCategory(AVAudioSessionCategory.Playback);
+            audioSession.OutputChannelsChanged += (sender, e) => Console.WriteLine("Output channels changed");
             audioSession.SetActive(true);
 
             // This is not working...
